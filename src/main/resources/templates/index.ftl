@@ -27,7 +27,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_content">
-                            <form action="/generator" method="post" class="form-horizontal form-label-left" novalidate>
+                            <form action="/generate/generator" method="post" class="form-horizontal form-label-left" novalidate>
                                 <div class="item form-group" style="margin-top: 100px;text-align: center;font-size: 40px"">
                                             Mybatis生成数据库映射文件
                                 </div>

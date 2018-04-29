@@ -94,7 +94,7 @@ public class Index {
                   //  "unzip generate-0.0.1-SNAPSHOT.jar  -d generate"+
                     "cd "+rootpath+"/mvnproject/"+"\n" +
                     "mvn mybatis-generator:generate";
-            String sh = rootpath+"mvn.sh";
+                String sh = rootpath+"mvn.sh";
             Files.write(Paths.get(sh), a.getBytes());
             setFilePermission(sh);
             p = Runtime.getRuntime().exec(sh);
@@ -111,7 +111,11 @@ public class Index {
                 System.out.println(line);
                 conlog+=line+"\n";
             }
+            //使用代理网络超时超时问题
+            Thread.sleep(6);
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         model.addAttribute("conlog",conlog);
